@@ -1,0 +1,27 @@
+.container-box {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #323948;
+
+  border-radius: 0.5rem;
+}
+
+.btnGenerateJoker {
+  border: 0.5rem solid #52ffa8;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #52ffa8;
+  color: #1b2434;
+
+  transition: ease-in-out 0.2s;
+}
+
+.btnGenerateJoker:hover {
+  filter: brightness(0.8);
+}
