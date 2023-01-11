@@ -18,7 +18,7 @@ export function Home() {
 
   return (
     <section className="container-box">
-      {loading && <p>Carregando as informações</p>}
+      {loading && <p>Loading the information</p>}
 
       {!loading && joker && <ShowJoker data={joker} />}
       <button onClick={generateJoker} className="btnGenerateJoker">
