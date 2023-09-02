@@ -1,6 +1,6 @@
 import pattermDivider from '../../assets/pattern-divider-mobile.svg';
 
-import './styles.css';
+import './styles.scss';
 
 interface ShowJokerProps {
   data: JokerDataProps;
