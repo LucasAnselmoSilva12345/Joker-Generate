@@ -1,8 +1,13 @@
 import pattermDivider from '../../assets/pattern-divider-mobile.svg';
+import { JokerData } from '../../pages/Home';
 
 import './styles.css';
 
-export function ShowJoker({ data }) {
+interface ShowJokerProps {
+  data: JokerData;
+}
+
+export function ShowJoker({ data }: ShowJokerProps) {
   return (
     <div key={data.id} className="content-data">
       <p>Joker</p>
