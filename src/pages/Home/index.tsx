@@ -5,7 +5,7 @@ import './styles.css';
 
 export function Home() {
   const [joker, setJoker] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   async function generateJoker() {
     setLoading(true);
