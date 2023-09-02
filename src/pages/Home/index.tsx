@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ShowJoker } from '../../components/ShowJoker';
 import { Bandaids } from 'phosphor-react';
-import './styles.css';
+import './styles.scss';
 
 export function Home() {
   const [joker, setJoker] = useState<JokerDataProps | null>(null);

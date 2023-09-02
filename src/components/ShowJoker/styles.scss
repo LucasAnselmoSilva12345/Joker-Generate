@@ -1,0 +1,24 @@
+.content-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #52ffa8;
+  }
+
+  h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+
+  img {
+    margin-bottom: 1.5rem;
+  }
+}
