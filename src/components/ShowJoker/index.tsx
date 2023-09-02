@@ -1,10 +1,9 @@
 import pattermDivider from '../../assets/pattern-divider-mobile.svg';
-import { JokerData } from '../../pages/Home';
 
 import './styles.css';
 
 interface ShowJokerProps {
-  data: JokerData;
+  data: JokerDataProps;
 }
 
 export function ShowJoker({ data }: ShowJokerProps) {

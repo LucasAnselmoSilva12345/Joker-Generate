@@ -3,13 +3,8 @@ import { ShowJoker } from '../../components/ShowJoker';
 import { Bandaids } from 'phosphor-react';
 import './styles.css';
 
-export interface JokerData {
-  id: string;
-  value: string;
-}
-
 export function Home() {
-  const [joker, setJoker] = useState<JokerData | null>(null);
+  const [joker, setJoker] = useState<JokerDataProps | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -21,7 +16,7 @@ export function Home() {
 
     try {
       const response = await fetch('https://api.chucknorris.io/jokes/random');
-      const data: JokerData = await response.json();
+      const data: JokerDataProps = await response.json();
 
       setJoker(data);
     } catch (error) {
