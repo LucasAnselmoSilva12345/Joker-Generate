@@ -1,19 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ShowJoker } from '../../components/ShowJoker';
 import { Bandaids } from 'phosphor-react';
 import './styles.css';
 
 export function Home() {
-  const [joker, setJoker] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [joker, setJoker] = useState<JokerDataProps | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    generateJoker();
+  }, []);
 
   async function generateJoker() {
     setLoading(true);
-    const response = await fetch('https://api.chucknorris.io/jokes/random');
-    const data = await response.json();
 
-    setJoker(data);
-    setLoading(false);
+    try {
+      const response = await fetch('https://api.chucknorris.io/jokes/random');
+      const data: JokerDataProps = await response.json();
+
+      setJoker(data);
+    } catch (error) {
+      console.log('Erro ao search joker: ', error);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
